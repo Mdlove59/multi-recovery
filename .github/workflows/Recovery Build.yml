@@ -6,7 +6,7 @@ on:
       MANIFEST_BRANCH:
         description: Manifest Branch
         required: true
-        default: android-14
+        default: android-14.0
       DEVICE_TREE_URL:
         description: Device Tree URL
         required: true

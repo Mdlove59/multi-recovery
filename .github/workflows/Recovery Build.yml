@@ -120,7 +120,7 @@ jobs:
 
     - name: Install Python 2
       run: |
-        sudo apt -y install python2
+        sudo apt -y install python3
 
     - name: Building recovery
       run: |

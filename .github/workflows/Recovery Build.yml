@@ -6,23 +6,23 @@ on:
       MANIFEST_BRANCH:
         description: Manifest Branch
         required: true
-        default: android-12.1
+        default: android-14
       DEVICE_TREE_URL:
         description: Device Tree URL
         required: true
-        default: https://github.com/PitchBlackRecoveryProject/android_device_infinix_X6739-pbrp
+        default: https://github.com/Mdlove59/android_device_xiaomi_agate
       DEVICE_TREE_BRANCH:
         description: Device Tree Branch
         required: true
-        default: android-12.1
+        default: twrp_14
       DEVICE_PATH:
         description: Path the device tree should be synced to, relative to source root
         required: true
-        default: device/infinix/X6739
+        default: device/xiaomi/agate
       DEVICE_MAKEFILE:
         description: 'Name of device-specific makefile from tree (format: <PREFIX>_<DEVICE_NAME>)'
         required: true
-        default: pb_X6739
+        default: twrp_agate
       BUILD_TARGET:
         type: choice
         description: Partition containing recovery ramdisk
@@ -31,7 +31,7 @@ on:
         - recovery
         - vendor_boot
         required: true
-        default: recovery
+        default: boot
 
 jobs:
   build:
@@ -70,7 +70,7 @@ jobs:
     - name: Set Swap Space
       uses: pierotofy/set-swap-space@master
       with:
-        swap-size-gb: 24
+        swap-size-gb: 32
 
     - name: Prepare the environment
       run: |
